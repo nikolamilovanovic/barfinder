@@ -1,0 +1,30 @@
+import Foundation
+import UIKit
+
+{% for type in types.implementing.AutoLens|struct %}
+//MARK: {{type.name}} AutoLens
+{{type.accessLevel}} extension {{ type.name }} {
+  enum lens {
+  {% for variable in type.variables where variable.defaultValue == nil and not variable.isComputed %}
+    {{type.accessLevel}} static let {{ variable.name }} = Lens<{{type.name}}, {{variable.typeName}}>(
+      view: { $0.{{variable.name}} },
+      set: { {{variable.name}}, {{type.name|lowerFirst}} in
+        {{type.name}}({% for argument in type.variables where argument.defaultValue == nil and not argument.isComputed %}{{argument.name}}: {% if variable.name == argument.name %}{{variable.name}}{% else %}{{type.name|lowerFirst}}.{{argument.name}}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
+      })
+  {% endfor %}
+  }
+}
+
+{# Adding lens composing #}
+{% for argument in type.variables where argument.type.implements.AutoLens %} 
+{{type.accessLevel}} extension LensProtocol where Self == Lens<{{type.name}}, {{argument.typeName}}> { 
+  {% for variable in argument.type.variables where variable.defaultValue == nil and not variable.isComputed %}
+  {{type.accessLevel}} var {{variable.name}}: {% if argument.isOptional and not variable.isOptional %}OptView{% endif %}Lens<{{type.name}},{{variable.typeName}}> {
+    return self • {{argument.unwrappedTypeName}}.lens.{{variable.name}}
+  }
+  {% endfor %} 
+}
+
+{% endfor %} 
+{# Dodavanje ekstenzija za kompoziciju OpViewLens-ova je suvise komplikovano i pitanje da li je izvodljivo. Ako zatreba, treba koristiti obicnu kompoziciju za •  #}
+{% endfor %}

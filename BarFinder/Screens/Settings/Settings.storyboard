@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGj-Cd-hOI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings Table View Controller-->
+        <scene sceneID="ilK-LN-Ayb">
+            <objects>
+                <tableViewController id="gGj-Cd-hOI" customClass="SettingsTableViewController" customModule="BarFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="bMO-mY-hUd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="doubleCell" rowHeight="60" id="Mfk-yZ-49P" customClass="DoubleTableViewCell" customModule="BarFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mfk-yZ-49P" id="Tur-7m-TYp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="CJV-Ld-Cv5">
+                                            <rect key="frame" x="271" y="14.5" width="94" height="29"/>
+                                            <connections>
+                                                <action selector="valueChanged:" destination="Mfk-yZ-49P" eventType="valueChanged" id="g5m-uB-Weg"/>
+                                            </connections>
+                                        </stepper>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcx-dd-04Q">
+                                            <rect key="frame" x="10" y="19.5" width="171" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs7-wO-N0p">
+                                            <rect key="frame" x="191" y="19.5" width="70" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="dEp-Og-JpE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="CJV-Ld-Cv5" secondAttribute="trailing" constant="10" id="XNG-h8-hei"/>
+                                        <constraint firstItem="Zcx-dd-04Q" firstAttribute="leading" secondItem="Tur-7m-TYp" secondAttribute="leading" constant="10" id="bPR-zc-Sps"/>
+                                        <constraint firstItem="CJV-Ld-Cv5" firstAttribute="leading" secondItem="Bs7-wO-N0p" secondAttribute="trailing" constant="10" id="c6D-cO-RXS"/>
+                                        <constraint firstItem="CJV-Ld-Cv5" firstAttribute="centerY" secondItem="Tur-7m-TYp" secondAttribute="centerY" id="dax-Lk-uU9"/>
+                                        <constraint firstItem="Zcx-dd-04Q" firstAttribute="centerY" secondItem="Tur-7m-TYp" secondAttribute="centerY" id="gs5-7R-UhU"/>
+                                        <constraint firstItem="Bs7-wO-N0p" firstAttribute="centerY" secondItem="Tur-7m-TYp" secondAttribute="centerY" id="vdd-fr-E6W"/>
+                                        <constraint firstItem="Bs7-wO-N0p" firstAttribute="leading" secondItem="Zcx-dd-04Q" secondAttribute="trailing" constant="10" id="wmg-6H-zCF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="settingStepper" destination="CJV-Ld-Cv5" id="RN1-ej-otp"/>
+                                    <outlet property="titleLabel" destination="Zcx-dd-04Q" id="03D-fV-10h"/>
+                                    <outlet property="valueLabel" destination="Bs7-wO-N0p" id="vmq-tM-7yK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gGj-Cd-hOI" id="Cbr-eA-WVR"/>
+                            <outlet property="delegate" destination="gGj-Cd-hOI" id="nNb-gv-PaB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ylb-Bf-SsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>

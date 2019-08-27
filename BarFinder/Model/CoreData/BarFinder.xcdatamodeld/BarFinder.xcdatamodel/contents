@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bar" representedClassName="BarMO" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="facebookUsername" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formattedAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="instagram" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="long" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bestPhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImageHolder" inverseName="bar" inverseEntity="ImageHolder" syncable="YES"/>
+    </entity>
+    <entity name="ImageHolder" representedClassName="ImageHolderMO" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Transformable" customClassName="ImageTransformer" syncable="YES"/>
+        <relationship name="bar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bar" inverseName="bestPhoto" inverseEntity="Bar" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bar" positionX="-569" positionY="-153" width="128" height="313"/>
+        <element name="ImageHolder" positionX="-63" positionY="117" width="128" height="73"/>
+    </elements>
+</model>

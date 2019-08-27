@@ -1,0 +1,46 @@
+
+
+"cancel" = "Cancel";
+"ok" = "OK";
+"error" = "Error";
+"link" = "Link";
+
+"twitter" = "Twitter";
+"list" = "List";
+"map" = "Map";
+"settings" = "Settings";
+
+"serviceScreenUserLoggedFormat" = "Logged to %@\n\nusername: %@\n\nid: %@";
+"serviceScreenUserNotLoggedFormat" = "Your are not Logged to %@\n\nFor getting new Bars\nyou must be logged in";
+"serviceScreenButtonTitleLogIn" = "Log In";
+"serviceScreenButtonTitleLogOut" = "Log Out";
+
+"settingsScreenSerchingDistance" = "Searching Distance";
+
+"locationErrorNoServiceEnableTitle" = "Location Services not enabled";
+"locationErrorNoServiceEnableMessage" = "Please go to Settings and turn on Location Services to enable Bars searching";
+
+"listScreenDistanceFormat" = "Distance: %@ m";
+
+"barDetailsNameFormat" = "Name: %@";
+"barDetailsLocationFormat" = "Location: %@, %@";
+"barDetailsDistanceFormat" = "Distance: %@ m";
+"barDetailsUrlFormat" = "URL: %@";
+"barDetailsDescriptionFormat" = "Description: %@";
+"barDetailsPhoneFormat" = "Phone: %@";
+"barDetailsTwitterFormat" = "Twitter: %@";
+"barDetailsInstagramFormat" = "Instagram: %@";
+"barDetailsFacebookFormat" = "Facebook: %@";
+"barDetailsAddresFormat" = "Address: %@";
+"barDetailsPostalCodeFormat" = "Postal code: %@";
+"barDetailsCityFormat" = "City: %@";
+"barDetailsStateFormat" = "State: %@";
+"barDetailsCountryFormat" = "Country: %@";
+"barDetailsFomratedAddressFormat" = "Formated Address: %@";
+
+
+
+
+
+
+

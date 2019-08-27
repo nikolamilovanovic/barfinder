@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ki3-zz-Gk1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Service View Controller-->
+        <scene sceneID="tQM-MI-4Rd">
+            <objects>
+                <viewController id="Ki3-zz-Gk1" customClass="ServiceViewController" customModule="BarFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Ic-g8-UcK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8f-vf-QDs">
+                                <rect key="frame" x="166.5" y="323" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aaq-2k-THr">
+                                <rect key="frame" x="164.5" y="363.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Ki3-zz-Gk1" eventType="touchUpInside" id="zPJ-hu-hQV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A8f-vf-QDs" firstAttribute="centerX" secondItem="Anw-1v-hew" secondAttribute="centerX" id="9ct-A1-gPp"/>
+                            <constraint firstItem="A8f-vf-QDs" firstAttribute="centerX" secondItem="Aaq-2k-THr" secondAttribute="centerX" id="RtT-CW-UKg"/>
+                            <constraint firstItem="Aaq-2k-THr" firstAttribute="top" secondItem="A8f-vf-QDs" secondAttribute="bottom" constant="20" id="Sv2-yh-DjR"/>
+                            <constraint firstItem="Anw-1v-hew" firstAttribute="centerY" secondItem="A8f-vf-QDs" secondAttribute="bottom" id="YZo-sb-vbK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Anw-1v-hew"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="A8f-vf-QDs" id="H5g-fQ-PEB"/>
+                        <outlet property="loggerButton" destination="Aaq-2k-THr" id="ojs-36-ydm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htf-dD-cFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="71"/>
+        </scene>
+    </scenes>
+</document>

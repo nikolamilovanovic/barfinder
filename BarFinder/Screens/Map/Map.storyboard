@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e9t-Rb-dHC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="7iG-he-xGw">
+            <objects>
+                <viewController id="e9t-Rb-dHC" customClass="MapViewController" customModule="BarFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wnj-7B-f2z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jug-Ng-rJ7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="krh-kj-lTj" firstAttribute="trailing" secondItem="jug-Ng-rJ7" secondAttribute="trailing" id="Hno-fs-JO5"/>
+                            <constraint firstItem="jug-Ng-rJ7" firstAttribute="leading" secondItem="krh-kj-lTj" secondAttribute="leading" id="NUH-vK-0wY"/>
+                            <constraint firstItem="jug-Ng-rJ7" firstAttribute="top" secondItem="krh-kj-lTj" secondAttribute="top" id="qP7-Xy-STa"/>
+                            <constraint firstItem="krh-kj-lTj" firstAttribute="bottom" secondItem="jug-Ng-rJ7" secondAttribute="bottom" id="rvw-IY-zIi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="krh-kj-lTj"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="jug-Ng-rJ7" id="CrT-gY-65Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bau-2l-ohO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="184"/>
+        </scene>
+    </scenes>
+</document>
