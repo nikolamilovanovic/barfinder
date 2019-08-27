@@ -1,7 +1,7 @@
 ## Getting Started
 
 1. Clone this repository.
-1. Sign up to Foursquare Developer and get client id and secrete
+1. Sign up to Foursquare Developer and get client id and secret
 1. Set clientId and clientSecret in FoursquareAPI.swift
 1. Run `pod update` to install dependencies.
 
