@@ -1,12 +1,11 @@
-## Getting Started
+## Description
+Demo iOS application for finding nearby bars, created using MVVM and Reactive programming (RxSwift)
 
+## Getting Started
 1. Clone this repository.
 1. Get client id and secret from Foursquare Developer. 
 1. Set clientId and clientSecret in FoursquareAPI.swift
 1. Run `pod install` to install dependencies.
-
-## Description
-Demo iOS application for finding nearby bars, created using MVVM and Reactive programming (RxSwift)
 
 ## License
 Copyright 2019 Nikola Milovanovic
